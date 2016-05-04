@@ -6,7 +6,6 @@ from scapy.all import *
 import argparse
 
 hiddenlist = []
-iface = 'wlan0'
 
 helpme = """
 Author : Besim ALTINOK ||| Team   : CanYouPwnMe
@@ -16,7 +15,7 @@ parser = argparse.ArgumentParser(description=helpme)
 parser.add_argument('-a', action='store', dest='bssid',
                     help='Hidden Access Point mac address')
 parser.add_argument('-i', action='store', dest='iface',
-                    help='Usable interface name\n') 
+                    help='Interface name (Monitor mode)\n') 
 args = parser.parse_args()
 
 hidden = args.bssid
