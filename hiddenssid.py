@@ -24,7 +24,7 @@ hiddenlist.append(hidden)
 
 def FindHiddenSSID(pkt):
 	if pkt.haslayer(Dot11ProbeResp) and (pkt.addr2).upper() in hiddenlist:
-		print " Hidden SSID broadcast : \n", 
+		print " Hidden SSID Broadcast Detected : \n", 
 		print "  * MAC Address : ", pkt.addr2
 		print "  * SSID info   : ", pkt.info
 		exit(0)
